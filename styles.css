@@ -1,0 +1,62 @@
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+}
+
+body {
+    background-color: #181d27;
+}
+
+.initial-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vh;
+}
+
+#welcome-text {
+    color: #3BC14A;
+    font-weight: 600;
+    font-size: 15rem;
+    animation: slideRight 2s;
+}
+
+#create-account {
+    font-size: 1.5rem;
+    color: #181d27;
+    font-weight: 300;
+    width: 25vw;
+    height: 10vh;
+    margin-top: -18vh;
+    border: none;
+    border-radius: 5vh;
+    background: linear-gradient(90deg,#3BC14A,#69b578);
+    animation: slideLeft 2s;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(250px);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(100vw);
+    }
+}
+
+
+
