@@ -7,8 +7,9 @@ body {
     background-color: #181d27;
 }
 
+
 .initial-page {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin-top: 8vh;
@@ -34,6 +35,70 @@ body {
     animation: slideLeft 2s;
 }
 
+.name-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+}
+#name-instruction {
+    color: #3BC14A;
+    font-weight: 600;
+    font-size: 5rem;
+}
+.name-entires {
+    display: flex;
+    gap: 5vw;
+    margin-bottom: 5vh;
+    margin-top: .1vh;
+}
+
+.name-input-holder {
+    position: relative;
+}
+
+.name-input {
+    width: 20vw;
+    outline: none !important;
+    border: none;
+    border-bottom: 3px solid;
+    background-color: #181d27;
+}
+
+.name-label {
+    position: absolute;
+    top: -2.2vh;
+    left: 0;
+    font-size: 2rem;
+    color: #525967;
+    cursor: text;
+    transition: .3s ease-in-out;
+}
+
+.name-input:focus + .name-label, 
+.name-input:valid + .name-label {
+    font-size: 1rem;
+    color: #EEF0F2;
+    top: -3vh;
+    pointer-events: none;
+}
+
+.name-input:focus, .name-input:valid {
+    font-family: 'Nunito', sans-serif;
+    border-bottom: #EEF0F2 solid;
+    font-size: 2rem;
+    color: #EEF0F2;
+}
+.next {
+    font-size: 1.5rem;
+    color: #181d27;
+    font-weight: 600;
+    width: 15vw;
+    height: 10vh;
+    border: none;
+    border-radius: 5vh;
+    background: linear-gradient(90deg,#3BC14A,#69b578);
+}
 
 
 
