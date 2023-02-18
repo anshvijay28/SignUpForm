@@ -1,7 +1,12 @@
-const createAccountButton = document.querySelector("#create-account");
+const bar = document.querySelector("#sliding")
+const nextButtons = document.querySelectorAll(".next");
 const initPage = document.querySelector('.initial-page');
+const namePage = document.querySelector('.name-page');
 
-createAccountButton.addEventListener("click", e => {
-    initPage.style.transform = "translateX(100vw)";
-    initPage.style.transition = "2s";
-});
+
+nextButtons.forEach(nextButton => {
+    nextButton.addEventListener("click", e => {
+        bar.style.transform = "translateX(-100vw)";
+        bar.style.transition = "2s";
+    })
+})
