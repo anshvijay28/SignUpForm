@@ -10,13 +10,16 @@ html {
     grid-template-columns: repeat(6, 1fr);
 }
 
-.initial-page {
+.page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8vh;
     width: 100vw;
     height: 100vh;
+}
+
+.initial-page {
+    margin-top: 8vh;
 }
 
 #welcome-text {
@@ -46,31 +49,26 @@ html {
     opacity: .25;
 }
 
-.name-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.name-page, .contact-page, .username-page, .password-page {
     margin-top: 20vh;
-    width: 100vw;
-    height: 100vh;
 }
-#name-instruction {
+#instruction {
     color: #3BC14A;
     font-weight: 600;
     font-size: 5rem;
 }
-.name-entires {
+.entries {
     display: flex;
     gap: 5vw;
     margin-bottom: 5vh;
     margin-top: .1vh;
 }
 
-.name-input-holder {
+.input-holder {
     position: relative;
 }
 
-.name-input {
+input {
     width: 20vw;
     outline: none !important;
     border: none;
@@ -78,7 +76,7 @@ html {
     background-color: #181d27;
 }
 
-.name-label {
+label {
     position: absolute;
     top: -2.2vh;
     left: 0;
@@ -88,15 +86,15 @@ html {
     transition: .3s ease-in-out;
 }
 
-.name-input:focus + .name-label, 
-.name-input:valid + .name-label {
+input:focus + label, 
+input:valid + label {
     font-size: 1rem;
     color: #EEF0F2;
     top: -3vh;
     pointer-events: none;
 }
 
-.name-input:focus, .name-input:valid {
+input:focus, input:valid {
     font-family: 'Nunito', sans-serif;
     border-bottom: #EEF0F2 solid;
     font-size: 2rem;
@@ -119,12 +117,22 @@ html {
     opacity: .25;
 }
 
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(250px);
-    }
+#show-password {
+    position:absolute;
+    top: -1.5vh;
+    left: calc(20vw - 2rem);
+    font-size: 2rem;
+    color: #525967;
 }
+
+#show-confirm-password {
+    position:absolute;
+    top: -1.5vh;
+    left: calc(20vw - 2rem);
+    font-size: 2rem;
+    color: #525967;
+}
+
 
 @keyframes slideLeft {
     0% {
