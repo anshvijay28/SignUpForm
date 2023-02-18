@@ -9,27 +9,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:ital,wght@0,100;0,500;0,700;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src = "index.js" defer></script>
 
 </head>
 <body id = "sliding">
-    <div class = "initial-page">
+    <div class = "initial-page page">
         <h1 id = "welcome-text">Welcome</h1>
         <button id = "create-account" class = "next">Create Account</button>
     </div>
-    <div class = "name-page">
-        <h1 id = "name-instruction">Please enter your name</h1>
-        <div class = "name-entires">
+    <div class = "name-page page">
+        <h1 id = "instruction">Please enter your name</h1>
+        <div class = "entries">
             <form>
-                <div class = "name-input-holder">
-                    <input class = "name-input" id = "first-name" type="text" required>
-                    <label for = "first-name" class = "name-label" >First Name</label>
+                <div class = "input-holder">
+                    <input id = "first-name" type="text" required>
+                    <label for = "first-name">First Name</label>
+                    
                 </div>
             </form>
             <form>
-                <div class = "name-input-holder">
-                    <input class = "name-input" id = "last-name" type="text" required>
-                    <label for = "last-name" class = "name-label">Last Name</label>
+                <div class = "input-holder">
+                    <input id = "last-name" type="text" required>
+                    <label for = "last-name">Last Name</label>
+                </div>
+            </form>
+        </div>
+        <button class = "next">Next</button>
+    </div>
+    <div class = "contact-page page">
+        <h1 id = "instruction">Let's get some contact info</h1>
+        <div class = "entries">
+            <form>
+                <div class = "input-holder">
+                    <input id = "email" type="email" required>
+                    <label for = "email">Email</label>
+                    
+                </div>
+            </form>
+            <form>
+                <div class = "input-holder">
+                    <input id = "phone" type="tel" required>
+                    <label for = "phone">Phone</label>
+                </div>
+            </form>
+        </div>
+        <button class = "next">Next</button>
+    </div>
+    <div class = "username-page page">
+        <h1 id = "instruction">Make a username!</h1>
+        <div class = "entries">
+            <form>
+                <div class = "input-holder">
+                    <input id = "username" type="text" required>
+                    <label for = "username">Username</label>
+                </div>
+            </form>
+        </div>
+        <button class = "next">Next</button>
+    </div>
+    <div class = "password-page page">
+        <h1 id = "instruction">Finally, your password</h1>
+        <div class = "entries">
+            <form>
+                <div class = "input-holder">
+                    <input id = "password" type="password" required>
+                    <label for = "password">Password</label>
+                    <span class = "material-icons" id = "show-password">visibility</span>
+                </div>
+            </form>
+            <form>
+                <div class = "input-holder">
+                    <input id = "confirm-password" type="password" required>
+                    <label for = "confirm-password">Confirm Password</label>
+                    <span class = "material-icons" id = "show-confirm-password">visibility</span>
                 </div>
             </form>
         </div>
