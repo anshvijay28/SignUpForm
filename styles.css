@@ -3,16 +3,20 @@ html {
     font-size: 100%;
 }
 
-body {
+#sliding {
+    overflow: visible;
     background-color: #181d27;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 }
 
-
 .initial-page {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 8vh;
+    width: 100vw;
+    height: 100vh;
 }
 
 #welcome-text {
@@ -34,12 +38,21 @@ body {
     background: linear-gradient(90deg,#3BC14A,#69b578);
     animation: slideLeft 2s;
 }
+#create-account:hover {
+    opacity: .5;
+}
+
+#create-account:active {
+    opacity: .25;
+}
 
 .name-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20vh;
+    width: 100vw;
+    height: 100vh;
 }
 #name-instruction {
     color: #3BC14A;
@@ -99,7 +112,12 @@ body {
     border-radius: 5vh;
     background: linear-gradient(90deg,#3BC14A,#69b578);
 }
-
+.next:hover {
+    opacity: .5;
+}
+.next:active {
+    opacity: .25;
+}
 
 
 @keyframes slideUp {
