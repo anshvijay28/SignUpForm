@@ -7,7 +7,7 @@ html {
     overflow: visible;
     background-color: #181d27;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 }
 
 .page {
@@ -19,7 +19,7 @@ html {
 }
 
 .initial-page {
-    margin-top: 8vh;
+    margin-bottom: 10vh;
 }
 
 #welcome-text {
@@ -52,6 +52,12 @@ html {
 .name-page, .contact-page, .username-page, .password-page {
     margin-top: 20vh;
 }
+.confirm-page {
+    margin-top: 10vh;
+}
+.thank-you-page {
+    margin-top: 20vh;
+}
 #instruction {
     color: #3BC14A;
     font-weight: 600;
@@ -78,7 +84,7 @@ input {
 
 label {
     position: absolute;
-    top: -2.2vh;
+    top: -2.7vh;
     left: 0;
     font-size: 2rem;
     color: #525967;
@@ -133,6 +139,49 @@ input:focus, input:valid {
     color: #525967;
 }
 
+.show-user-entries {
+    margin-bottom: 8vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+
+.user-entry {
+    width: 20vw;
+    height: calc(2rem + 1.2vh);
+    outline: none !important;
+    border: #EEF0F2 solid 3px;
+    border-radius: 5vh;
+    background-color: #181d27;
+}
+.user-entry:placeholder-shown {
+
+}
+
+.user-entry::placeholder {
+    color: #EEF0F2;
+    font-size: 2rem;
+    padding: .5rem;
+    line-height: calc(2rem + 1vh);
+    vertical-align: bottom;
+    font-family: 'Nunito', sans-serif;
+}
+
+.user-entry-label {
+    font-size: 1rem;
+    color: #EEF0F2;
+    top: -3vh;
+    pointer-events: none;
+}
+
+#thank-you-text {
+    color: #3BC14A;
+    font-weight: 600;
+    font-size: 10rem;
+    animation: 1s pulse infinite;
+}
 
 @keyframes slideLeft {
     0% {
@@ -159,10 +208,6 @@ input:focus, input:valid {
 		transform: scale(1);
 	}
 }
-
-
-
-
 
 @keyframes fadeIn {
     from { opacity: 0; }
