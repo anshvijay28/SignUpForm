@@ -1,5 +1,6 @@
 const bar = document.querySelector("#sliding")
 const nextButtons = document.querySelectorAll(".next");
+const no = document.querySelector("#no-button");
 
 const fName = document.querySelector("#first-name");
 const lName = document.querySelector("#last-name");
@@ -49,6 +50,9 @@ function getData(page) {
 }
 
 nextButtons.forEach(nextButton => {
+    if (nextButton.id === "no-button") {
+
+    }
     nextButton.addEventListener("click", e => {
         if (pages === -1 || pages >= 3 || canMoveOn(pages) ) {
             let value = (-100 * pages) - 200; 
@@ -60,6 +64,12 @@ nextButtons.forEach(nextButton => {
             pages += 1;
         }
     })
+});
+
+no.addEventListener("click", e => {
+    pages = 0;
+    bar.style.transform = "translateX(100vw)";
+    bar.style.transition = "2s";
 });
 
 showPassword.addEventListener("click", () => {
