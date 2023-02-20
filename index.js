@@ -9,7 +9,16 @@ const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-password");
 
+
+let userFName = document.querySelector("#userFName"); 
+let userLName = document.querySelector("#userLName");
+let userEmail = document.querySelector("#userEmail");
+let userPhone = document.querySelector("#userPhone");
+let userUsername = document.querySelector("#userUsername");
+let userPassword = document.querySelector("#userPassword");
+
 const required = [[fName, lName], [email, phone], [username], [password, confirmPassword]];
+const userInput = [[userFName, userLName], [userEmail, userPhone], [userUsername], [userPassword]];
 
 const showPassword = document.querySelector("#show-password");
 const showConfirmPassword = document.querySelector("#show-confirm-password");
@@ -31,13 +40,23 @@ function canMoveOn(page) {
     return true;
 }
 
+function getData(page) {
+    if (page === 3) {
+        userPassword.setAttribute("placeholder", password.value);
+    } else {
+        required[page].forEach((element, i) => userInput[page][i].setAttribute("placeholder", element.value));
+    }
+}
+
 nextButtons.forEach(nextButton => {
     nextButton.addEventListener("click", e => {
-        console.log(pages);
-        if (pages === -1 || canMoveOn(pages)) {
+        if (pages === -1 || pages >= 3 || canMoveOn(pages) ) {
             let value = (-100 * pages) - 200; 
             bar.style.transform = "translateX(" + value.toString() +  "vw)";
             bar.style.transition = "2s";
+            if (pages !== -1) {
+                getData(pages);
+            }
             pages += 1;
         }
     })
