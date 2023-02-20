@@ -35,7 +35,7 @@
                 </div>
             </form>
         </div>
-        <button class = "next">Next</button>
+        <button class = "next" type = "submit">Next</button>
     </div>
     <div class = "contact-page page">
         <h1 id = "instruction">Let's get some contact info</h1>
@@ -54,7 +54,7 @@
                 </div>
             </form>
         </div>
-        <button class = "next">Next</button>
+        <button class = "next" type = "submit">Next</button>
     </div>
     <div class = "username-page page">
         <h1 id = "instruction">Make a username!</h1>
@@ -66,7 +66,7 @@
                 </div>
             </form>
         </div>
-        <button class = "next">Next</button>
+        <button class = "next" type = "submit">Next</button>
     </div>
     <div class = "password-page page">
         <h1 id = "instruction">Finally, your password</h1>
@@ -86,7 +86,40 @@
                 </div>
             </form>
         </div>
-        <button class = "next">Next</button>
+        <button class = "next" type = "submit">Confirm</button>
+    </div>
+    <div class = "confirm-page page">
+        <h1 id = "instruction">Is all your information correct?</h1>
+        <div class = "show-user-entries">
+            <div class = "input-holder">
+                <input class = "user-entry" id = "userFName" type="text" readonly>
+                <label id = "displayFName" class = "user-entry-label" for = "userFName">First Name</label>
+            </div>
+            <div class = "input-holder">
+                <input class = "user-entry" id = "userLName" type="text" readonly>
+                <label  id = "displayLName" class = "user-entry-label" for = "userLName">Last Name</label>
+            </div>
+            <div class = "input-holder">
+                <input class = "user-entry" id = "userEmail" type="email" readonly>
+                <label  id = "displayEmail" class = "user-entry-label" for = "userEmail">Email</label>
+            </div>
+            <div class = "input-holder">
+                <input class = "user-entry" id = "userPhone" type="tel" readonly>
+                <label  id = "displayPhone" class = "user-entry-label" for = "userPhone">Phone</label>
+            </div>
+            <div class = "input-holder">
+                <input class = "user-entry" id = "userUsername" type="text" readonly>
+                <label  id = "displayUsername" class = "user-entry-label" for = "userUsername">Username</label>
+            </div>
+            <div class = "input-holder">
+                <input class = "user-entry" id = "userPassword" type="password" readonly>
+                <label  id = "displayPassword" class = "user-entry-label" for = "userPassword">Password</label>
+            </div>
+        </div>
+        <button class = "next" type = "submit">Yes!</button>
+    </div>
+    <div class = "thank-you-page page">
+        <h1 id = "thank-you-text">Thank You!</h1>
     </div>
 </body>
 </html>
