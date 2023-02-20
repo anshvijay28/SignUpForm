@@ -68,7 +68,7 @@ nextButtons.forEach(nextButton => {
 
 no.addEventListener("click", e => {
     pages = 0;
-    bar.style.transform = "translateX(100vw)";
+    bar.style.transform = "translateX(-100vw)";
     bar.style.transition = "2s";
 });
 
